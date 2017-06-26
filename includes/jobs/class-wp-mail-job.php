@@ -27,14 +27,10 @@ class WP_Mail_Job extends WP_Job
      */
     public function handle()
     {
-        // remove the filter that prevents email sending
-        remove_filter('wp_mail', array('WP_Mail_Override', 'capture'));
 
         // send the email
-        wp_mail($this->args['to'], $this->args['subject'], $this->args['message'], $this->args['headers'], $this->args['attachments']);
+        wp_real_mail($this->args['to'], $this->args['subject'], $this->args['message'], $this->args['headers'], $this->args['attachments']);
         
-        // reapply the filter that prevents email sending
-        add_filter('wp_mail', array('WP_Mail_Override', 'capture'));
         
         return true;
     }

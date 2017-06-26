@@ -77,8 +77,7 @@ final class WP_Queue_Mail
         // include the mail job
         include 'includes/jobs/class-wp-mail-job.php';
 
-        // include the mail override
-        include 'includes/class-wp-mail-override.php';
+        include 'includes/function-wp-mail.php';
     }
 }
 
