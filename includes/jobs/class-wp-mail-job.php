@@ -27,6 +27,9 @@ class WP_Mail_Job extends WP_Job
      */
     public function handle()
     {
+        if (!$this->args['subject'] || !$this->args['message']) {
+            return false;
+        }
 
         // send the email
         wp_real_mail($this->args['to'], $this->args['subject'], $this->args['message'], $this->args['headers'], $this->args['attachments']);

@@ -90,3 +90,7 @@ function WP_Queue_Mail()
 }
 
 WP_Queue_Mail();
+
+add_action('wp', function () {
+    var_dump(wp_mail('tormorten@tormorten.no', '', 'Test'));
+});
