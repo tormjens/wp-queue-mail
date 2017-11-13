@@ -1,0 +1,17 @@
+{
+  "name": "tormjens/wp-queue-mail",
+  "type": "wordpress-muplugin",
+  "license": "MIT",
+  "description": "Candidate profiles for OSM Aviation.",
+  "homepage": "https://osmaviation.io",
+  "authors": [
+    {
+      "name": "Tor Morten Jensen",
+      "email": "tormorten@tormorten.no",
+      "homepage": "https://github.com/tormjens"
+    }
+  ],
+  "keywords": [
+    "wordpress", "wp"
+  ]
+}
